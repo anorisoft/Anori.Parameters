@@ -4,10 +4,13 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ExpressionObservers.Observers
+namespace Anori.ParameterObservers.Base
 {
     using System;
     using System.Linq.Expressions;
+
+    using Anori.ExpressionObservers.Base;
+    using Anori.ExpressionObservers.Tree;
 
     using JetBrains.Annotations;
 
@@ -16,10 +19,10 @@ namespace Anori.ExpressionObservers.Observers
     /// </summary>
     /// <typeparam name="TSelf">The type of the self.</typeparam>
     /// <typeparam name="TResult">The type of the result.</typeparam>
-    /// <seealso cref="Anori.ExpressionObservers.Observers.PropertyObserverBase{TSelf}" />
-    /// <seealso cref="Anori.ExpressionObservers.Observers.PropertyObserverBase" />
-    public abstract class PropertyObserverBase<TSelf, TResult> : PropertyObserverBase<TSelf>
-        where TSelf : PropertyObserverBase<TSelf, TResult>
+    /// <seealso cref="PropertyObserverBase{TSelf}" />
+    /// <seealso cref="PropertyObserverBase" />
+    public abstract class ParameterObserverBase<TSelf, TResult> : ParameterObserverBase<TSelf>
+        where TSelf : ParameterObserverBase<TSelf, TResult>
     {
         /// <summary>
         ///     The property expression.
@@ -27,11 +30,11 @@ namespace Anori.ExpressionObservers.Observers
         private readonly Expression<Func<TResult>> propertyExpression;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PropertyObserverBase{TSelf, TResult}"/> class.
+        /// Initializes a new instance of the <see cref="PropertyObserverBase{TSelf,TResult}"/> class.
         /// </summary>
         /// <param name="propertyExpression">The property expression.</param>
         /// <exception cref="ArgumentNullException">propertyExpression is null.</exception>
-        protected PropertyObserverBase([NotNull] Expression<Func<TResult>> propertyExpression)
+        protected ParameterObserverBase([NotNull] Expression<Func<TResult>> propertyExpression)
         {
             this.propertyExpression = propertyExpression ?? throw new ArgumentNullException(nameof(propertyExpression));
             this.ExpressionString = this.CreateChain();

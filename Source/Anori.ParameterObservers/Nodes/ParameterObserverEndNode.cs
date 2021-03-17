@@ -59,10 +59,10 @@ namespace Anori.ParameterObservers.Nodes
         }
 
         /// <summary>
-        ///     Called when [value changed].
+        /// Called when [value changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="EventArgs{object}" /> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs{object}"/> instance containing the event data.</param>
         private void OnValueChanged(object sender, EventArgs<object> e) => this.action.Raise();
     }
 }

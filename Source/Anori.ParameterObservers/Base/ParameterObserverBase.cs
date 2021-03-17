@@ -4,20 +4,20 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ParameterObservers
+namespace Anori.ParameterObservers.Base
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
 
-    using Anori.ExpressionObservers.Interfaces;
-    using Anori.ExpressionObservers.Observers;
+    using Anori.ExpressionObservers.Base;
+    using Anori.ExpressionObservers.Tree.Interfaces;
     using Anori.ParameterObservers.Interfaces;
     using Anori.ParameterObservers.Nodes;
     using Anori.Parameters;
 
     /// <summary>
-    ///     Property Observer Base.
+    /// Property Observer Base.
     /// </summary>
     /// <seealso cref="System.Collections.Generic.IEqualityComparer{Anori.ParameterObservers.ParameterObserverBase}" />
     /// <seealso cref="System.IEquatable{Anori.ParameterObservers.ParameterObserverBase}" />
@@ -364,7 +364,7 @@ namespace Anori.ParameterObservers
         //                    var root = new RootPropertyObserverNode(
         //                        propertyElement.PropertyInfo,
         //                        this.OnAction,
-        //                        (INotifyPropertyChanged)fieldElement.FieldInfo.GetValue(constantElement.Value));
+        //                        (INotifyPropertyChanged)fieldElement.FieldInfo.GeTResult(constantElement.Value));
 
         //                    this.LoopTree(propertyElement, root);
         //                    this.RootNodes.Add(root);
@@ -455,7 +455,9 @@ namespace Anori.ParameterObservers
             }
         }
 
-        private protected IParameterObserverRootNode CreateParameterObserverChain(object parameter, IPropertyNode property)
+        private protected IParameterObserverRootNode CreateParameterObserverChain(
+            object? parameter,
+            IPropertyNode property)
         {
             ParameterObserverRootNode parameterObserverRoot;
             IPropertyNode next;
@@ -463,7 +465,7 @@ namespace Anori.ParameterObservers
             {
                 if (!(property is { Next: IPropertyNode nextProperty }))
                 {
-                    return new ParameterObserverSingleNode(this.OnAction, parameter, p);
+                    return new ParameterObserverSingleNode(this.OnAction, p);
                 }
 
                 parameterObserverRoot = new ParameterObserverRootNode(property.PropertyInfo, this.OnAction, p);
@@ -478,20 +480,17 @@ namespace Anori.ParameterObservers
 
                 if (!(property is { Next: IPropertyNode nextProperty }))
                 {
-                    return new ParameterObserverSingleNode(this.OnAction, parameter, readOnlyParameter);
+                    return new ParameterObserverSingleNode(this.OnAction, readOnlyParameter);
                 }
 
                 if (!(nextProperty is { Next: IPropertyNode n }))
                 {
                     throw new Exception("No Parameter.");
                 }
-                
+
                 next = n;
-                parameterObserverRoot = new ParameterObserverRootNode(
-                        n.PropertyInfo,
-                        this.OnAction,
-                        readOnlyParameter);
-                
+                parameterObserverRoot = new ParameterObserverRootNode(n.PropertyInfo, this.OnAction, readOnlyParameter);
+
                 //if (typeof(IReadOnlyParameter).IsAssignableFrom(nextProperty.PropertyInfo.PropertyType))
                 //{
                 //    parameterObserverRoot = new ParameterObserverRootNode(nextProperty.PropertyInfo, this.OnAction,  readOnlyParameter);

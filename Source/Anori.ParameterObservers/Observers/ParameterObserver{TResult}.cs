@@ -4,12 +4,14 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ParameterObservers
+namespace Anori.ParameterObservers.Observers
 {
     using System;
     using System.Linq.Expressions;
 
+    using Anori.ExpressionObservers.Base;
     using Anori.ExpressionObservers.Observers;
+    using Anori.ParameterObservers.Base;
 
     using JetBrains.Annotations;
 
@@ -17,7 +19,7 @@ namespace Anori.ParameterObservers
     ///     Property Observer.
     /// </summary>
     /// <typeparam name="TResult">The type of the result.</typeparam>
-    /// <seealso cref="Anori.ExpressionObservers.Observers.PropertyObserverBase{TResult}" />
+    /// <seealso cref="PropertyObserverBase{TSelf}" />
     public sealed class ParameterObserver<TResult> : ParameterObserverBase<ParameterObserver<TResult>, TResult>
     {
         /// <summary>

@@ -24,10 +24,9 @@ namespace Anori.ParameterObservers.Nodes
         /// <param name="action">The action.</param>
         /// <param name="owner">The owner.</param>
         /// <param name="parameter">The parameter.</param>
-        public ParameterObserverSingleNode(Action action, object owner, IReadOnlyParameter parameter)
+        public ParameterObserverSingleNode(Action action, IReadOnlyParameter parameter)
             : base(action)
         {
-            this.Owner = owner;
             this.Parameter = parameter;
         }
 
@@ -39,15 +38,7 @@ namespace Anori.ParameterObservers.Nodes
         /// </value>
         public IReadOnlyParameter Parameter { get; }
 
-        /// <summary>
-        ///     Gets the owner.
-        /// </summary>
-        /// <value>
-        ///     The owner.
-        /// </value>
-        public object Owner { get; }
-
-        /// <summary>
+       /// <summary>
         /// Subscribes the listener for owner.
         /// </summary>
         public void SubscribeListenerForOwner()

@@ -6,6 +6,8 @@
     <IsPackable>false</IsPackable>
 
     <LangVersion>8</LangVersion>
+
+    <Configurations>Debug;Release;Debug Submodules</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +17,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Source\Anori.ParameterObservers.Reactive\Anori.ParameterObservers.Reactive.csproj" />
     <ProjectReference Include="..\..\Source\Anori.ParameterObservers\Anori.ParameterObservers.csproj" />
-    <ProjectReference Include="..\..\Submodules\Anori.Common\Source\Anori.Parameters\Anori.Parameters.csproj" />
+    <ProjectReference Include="..\..\Source\Anori.Parameters\Anori.Parameters.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="!($(Configuration.Contains('Submodules')))">
+    <PackageReference Include="Anori.Common" Version="1.0.0-alpha0004" />
+    <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0009" />
+  </ItemGroup>
+
+  <ItemGroup Condition="($(Configuration.Contains('Submodules')))">
+    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Extensions\Source\Anori.Extensions\Anori.Extensions.csproj" />
+    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Common\Source\Anori.Common\Anori.Common.csproj" />
   </ItemGroup>
 
 </Project>

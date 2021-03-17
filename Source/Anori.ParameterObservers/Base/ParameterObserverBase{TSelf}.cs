@@ -4,13 +4,15 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ParameterObservers
+namespace Anori.ParameterObservers.Base
 {
+    using Anori.ExpressionObservers.Base;
+
     /// <summary>
     ///     Property Observer Base for flurnent.
     /// </summary>
     /// <typeparam name="TSelf">The type of the self.</typeparam>
-    /// <seealso cref="Anori.ExpressionObservers.Observers.PropertyObserverBase" />
+    /// <seealso cref="PropertyObserverBase" />
     public abstract class ParameterObserverBase<TSelf> : ParameterObserverBase
         where TSelf : ParameterObserverBase<TSelf>
     {

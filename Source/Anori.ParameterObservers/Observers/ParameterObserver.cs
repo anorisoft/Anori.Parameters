@@ -4,13 +4,10 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ParameterObservers
+namespace Anori.ParameterObservers.Observers
 {
     using System;
-    using System.ComponentModel;
     using System.Linq.Expressions;
-
-    using Anori.ExpressionObservers.Observers;
 
     using JetBrains.Annotations;
 

@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Anori.ParameterObservers.Reactive</name>
+    </assembly>
+    <members>
+        <member name="F:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2"/> class.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action</exception>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.subject">
+            <summary>
+            The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.Subscribe(System.IObserver{`1})">
+            <summary>
+            Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+            A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1">
+            <summary>
+            The Behavior Parameter Observer class.
+            </summary>
+            <typeparam name="TResult">The type of the value.</typeparam>
+            <seealso cref="!:Anori.ParameterObservers.ParameterObserverBase&lt;Anori.ParameterObservers.Reactive.BehaviorParameterObserver&lt;TParameter1, TResult&gt;, TParameter1, TResult&gt;" />
+            <seealso cref="T:System.IObservable`1" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`2"/> class.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action</exception>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.subject">
+            <summary>
+            The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+            A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.BehaviorParameterObserver`1.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Reactive.ObserverFactory">
+            <summary>
+            The Observer Factory class.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ObserverFactory.Observes``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean)">
+            <summary>
+            Observeses the specified parameter1.
+            </summary>
+            <typeparam name="TParameter1">The type of the parameter1.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="isAutoSubscribe">if set to <c>true</c> [is automatic subscribe].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ObserverFactory.Observes``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Boolean)">
+            <summary>
+            Observeses the specified property expression.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="isAutoSubscribe">if set to <c>true</c> [is automatic subscribe].</param>
+            <returns></returns>
+        </member>
+        <member name="T:Anori.ParameterObservers.Reactive.ParameterObserver`2">
+            <summary>
+            The Parameter Observer class.
+            </summary>
+            <typeparam name="TResult">The type of the value.</typeparam>
+            <typeparam name="TParameter1">The type of the owner.</typeparam>
+            <seealso cref="!:Anori.ParameterObservers.ParameterObserverBase&lt;Anori.ParameterObservers.Reactive.ParameterObserver&lt;TResult, TOwner&gt;, TOwner, TResult&gt;" />
+            <seealso cref="T:System.IObservable`1" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ParameterObserver`2.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ParameterObserver`2.subject">
+            <summary>
+                The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ParameterObserver`1" /> class.
+            </summary>
+            <param name="parameter1">The owner.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`2.Subscribe(System.IObserver{`1})">
+            <summary>
+                Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+                A reference to an interface that allows observers to stop receiving notifications before the provider has finished
+                sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`2.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`2.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ParameterObserver`1.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ParameterObserver`1.subject">
+            <summary>
+                The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ParameterObserver`1" /> class.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`1.Subscribe(System.IObserver{`0})">
+            <summary>
+                Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+                A reference to an interface that allows observers to stop receiving notifications before the provider has finished
+                sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`1.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ParameterObserver`1.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1">
+            <summary>
+            The Replay Parameter Observer class.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="!:Anori.ParameterObservers.ParameterObserverBase&lt;Anori.ParameterObservers.Reactive.ReplayParameterObserver&lt;TResult&gt;, TResult&gt;" />
+            <seealso cref="!:System.IObservable&lt;TResult?&gt;" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.subject">
+            <summary>
+                The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1"/> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action
+            or
+            propertyGetter</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2" /> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.Int32,System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2" /> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="bufferSize">Size of the buffer.</param>
+            <param name="window">The window.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2" /> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="window">The window.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.Subscribe(System.IObserver{System.Nullable{`0}})">
+            <summary>
+                Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+                A reference to an interface that allows observers to stop receiving notifications before the provider has finished
+                sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`1.PropertyGetter(System.Func{`0})">
+            <summary>
+                Properties the getter.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.propertyGetter">
+            <summary>
+                The property propertyGetter
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.subject">
+            <summary>
+                The subject
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}})">
+            <summary>
+                Initializes a new instance of the <see cref="!:Parameters.ParameterObserver&lt;TResult,Tparameter1&gt;" /> class.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">action</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.Subscribe(System.IObserver{System.Nullable{`1}})">
+            <summary>
+                Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <param name="observer">The object that is to receive notifications.</param>
+            <returns>
+                A reference to an interface that allows observers to stop receiving notifications before the provider has finished
+                sending them.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.OnAction">
+            <summary>
+                Calls the action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.PropertyGetter(System.Func{`1})">
+            <summary>
+            Properties the getter.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Reactive.ReplayParameterObserver`2.PropertyGetter(System.Func{`0,`1},`0)">
+            <summary>
+            Properties the getter.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="parameter1">The parameter1.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

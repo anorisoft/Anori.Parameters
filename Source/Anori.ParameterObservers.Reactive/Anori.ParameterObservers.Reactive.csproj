@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,10 +8,10 @@
     <AssemblyOriginatorKeyFile>..\Anorisoft.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <PackageIcon>..\Anorisoft.png</PackageIcon>
-    <Description>AnoriSoft Parameter</Description>
+    <Description>AnoriSoft ParameterObservers Reactive</Description>
     <Company>AnoriSoft</Company>
     <Authors>Martin Egli</Authors>
-    <PackageTags>Parameter</PackageTags>
+    <PackageTags>Parameter, Observers, Reactive</PackageTags>
     <Copyright>Copyright (c) AnoriSoft</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -19,19 +19,25 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>Anori.Extensions.xml</DocumentationFile>
+    <DocumentationFile>Anori.ParameterObservers.Reactive.xml</DocumentationFile>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>Anori.Extensions.xml</DocumentationFile>
+    <DocumentationFile>Anori.ParameterObservers.Reactive.xml</DocumentationFile>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Submodules|AnyCPU'">
-    <DocumentationFile>Anori.Extensions.xml</DocumentationFile>
+    <DocumentationFile>Anori.ParameterObservers.Reactive.xml</DocumentationFile>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Submodules|AnyCPU'">
+    <DocumentationFile>Anori.ParameterObservers.Reactive.xml</DocumentationFile>
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
@@ -46,12 +52,23 @@
 
   <ItemGroup Condition="!($(Configuration.Contains('Submodules')))">
     <PackageReference Include="Anori.Common" Version="1.0.0-alpha0004" />
+    <PackageReference Include="Anori.ExpressionObservers" Version="1.0.0-alpha0009" />
     <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0009" />
   </ItemGroup>
 
   <ItemGroup Condition="($(Configuration.Contains('Submodules')))">
     <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Extensions\Source\Anori.Extensions\Anori.Extensions.csproj" />
     <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Common\Source\Anori.Common\Anori.Common.csproj" />
+    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.ExpressionObservers\Source\Anori.ExpressionObservers\Anori.ExpressionObservers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Anori.ParameterObservers\Anori.ParameterObservers.csproj" />
+    <ProjectReference Include="..\Anori.Parameters\Anori.Parameters.csproj" />
   </ItemGroup>
 
 </Project>

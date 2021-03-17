@@ -14,14 +14,6 @@ namespace Anori.ParameterObservers.Interfaces
     internal interface IParameterObserverRootNode : IParameterObserverNode
     {
         /// <summary>
-        /// Gets the owner.
-        /// </summary>
-        /// <value>
-        /// The owner.
-        /// </value>
- //       object Owner { get; }
-
-        /// <summary>
         /// Subscribes the listener for owner.
         /// </summary>
         void SubscribeListenerForOwner();

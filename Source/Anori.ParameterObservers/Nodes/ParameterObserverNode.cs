@@ -59,7 +59,7 @@ namespace Anori.ParameterObservers.Nodes
         /// <value>
         ///     The next.
         /// </value>
-        public IParameterObserverNode Next { get; set; }
+        public IParameterObserverNode? Next { get; set; }
 
         /// <summary>
         ///     Gets the property information.
@@ -75,7 +75,7 @@ namespace Anori.ParameterObservers.Nodes
         /// <value>
         /// The previous.
         /// </value>
-        public IParameterObserverNode Previous { get; set; }
+        public IParameterObserverNode? Previous { get; set; }
 
         /// <summary>
         /// Subscribes the listener for.
@@ -139,7 +139,7 @@ namespace Anori.ParameterObservers.Nodes
                     "Trying to subscribe ValueChanged listener in object that, but the object does not implements IReadOnlyParameter.");
             }
 
-            this.Previous.SubscribeListenerFor(parameter1);
+            this.Previous?.SubscribeListenerFor(parameter1);
         }
 
         /// <summary>

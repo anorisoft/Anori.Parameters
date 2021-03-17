@@ -1,0 +1,607 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Anori.ParameterObservers</name>
+    </assembly>
+    <members>
+        <member name="T:Anori.ParameterObservers.Base.ParameterObserverBase">
+            <summary>
+            Property Observer Base.
+            </summary>
+            <seealso cref="!:System.Collections.Generic.IEqualityComparer&lt;Anori.ParameterObservers.ParameterObserverBase&gt;" />
+            <seealso cref="!:System.IEquatable&lt;Anori.ParameterObservers.ParameterObserverBase&gt;" />
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase" />
+            <seealso cref="T:System.IDisposable" />
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase" />
+        </member>
+        <member name="P:Anori.ParameterObservers.Base.ParameterObserverBase.ExpressionString">
+            <summary>
+                Gets the expression string.
+            </summary>
+            <value>
+                The expression string.
+            </value>
+        </member>
+        <member name="P:Anori.ParameterObservers.Base.ParameterObserverBase.RootNodes">
+            <summary>
+                Gets the root nodes.
+            </summary>
+            <value>
+                The root nodes.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.op_Equality(Anori.ParameterObservers.Base.ParameterObserverBase,Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Implements the operator ==.
+            </summary>
+            <param name="a">a.</param>
+            <param name="b">The b.</param>
+            <returns>
+                The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.op_Equality(Anori.ParameterObservers.Base.ParameterObserverBase,System.Object)">
+            <summary>
+                Implements the operator ==.
+            </summary>
+            <param name="a">a.</param>
+            <param name="b">The b.</param>
+            <returns>
+                The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.op_Inequality(Anori.ParameterObservers.Base.ParameterObserverBase,Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Implements the operator !=.
+            </summary>
+            <param name="a">a.</param>
+            <param name="b">The b.</param>
+            <returns>
+                The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.op_Inequality(Anori.ParameterObservers.Base.ParameterObserverBase,System.Object)">
+            <summary>
+                Implements the operator !=.
+            </summary>
+            <param name="a">a.</param>
+            <param name="b">The b.</param>
+            <returns>
+                The result of the operator.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Equals(Anori.ParameterObservers.Base.ParameterObserverBase,Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type T to compare.</param>
+            <param name="y">The second object of type T to compare.</param>
+            <returns>
+                true if the specified objects are equal; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Equals(Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+                true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Equals(System.Object)">
+            <summary>
+                Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+                <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.GetHashCode">
+            <summary>
+                Returns a hash code for this instance.
+            </summary>
+            <returns>
+                A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Dispose">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.System#Collections#Generic#IEqualityComparer{Anori#ParameterObservers#Base#ParameterObserverBase}#Equals(Anori.ParameterObservers.Base.ParameterObserverBase,Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Determines whether the specified objects are equal.
+            </summary>
+            <param name="x">The first object of type T to compare.</param>
+            <param name="y">The second object of type T to compare.</param>
+            <returns>
+                true if the specified objects are equal; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.GetHashCode(Anori.ParameterObservers.Base.ParameterObserverBase)">
+            <summary>
+                Returns a hash code for this instance.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>
+                A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Subscribe">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <summary>
+                Subscribes this instance.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Subscribe(System.Boolean)">
+            <summary>
+                Subscribes the specified silent.
+            </summary>
+            <param name="silent">if set to <c>true</c> [silent].</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Unsubscribe">
+            <summary>
+                Unsubscribes this instance.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.LoopTree(Anori.ExpressionObservers.Tree.Interfaces.IExpressionNode,Anori.ParameterObservers.Nodes.ParameterObserverNode)">
+            <summary>
+                Looptrees the specified expression node.
+            </summary>
+            <param name="expressionNode">The expression node.</param>
+            <param name="observerNode">The observer node.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.OnAction">
+            <summary>
+                The action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.CreateChain(Anori.ExpressionObservers.Tree.Interfaces.IExpressionTree)">
+            <summary>
+                Creates the chain.
+            </summary>
+            <param name="tree">The nodes.</param>
+            <exception cref="T:System.NotSupportedException">Expression Tree Node not supported.</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Base.ParameterObserverBase`3">
+            <summary>
+                Property Observer Base.
+            </summary>
+            <typeparam name="TSelf">The type of the self.</typeparam>
+            <typeparam name="TParameter1">The type of the parameter1.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="T:Anori.ParameterObservers.Base.ParameterObserverBase" />
+            <seealso cref="T:Anori.ParameterObservers.Base.ParameterObserverBase" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Base.ParameterObserverBase`3.propertyExpression">
+            <summary>
+                The property expression.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`3.#ctor(`1,System.Linq.Expressions.Expression{System.Func{`1,`2}})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Base.ParameterObserverBase`3" /> class.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">
+                propertyExpression
+                or
+                parameter1 is null.
+            </exception>
+        </member>
+        <member name="P:Anori.ParameterObservers.Base.ParameterObserverBase`3.ExpressionString">
+            <summary>
+                Gets the expression string.
+            </summary>
+            <value>
+                The expression string.
+            </value>
+        </member>
+        <member name="P:Anori.ParameterObservers.Base.ParameterObserverBase`3.Parameter1">
+            <summary>
+                Gets the parameter1.
+            </summary>
+            <value>
+                The parameter1.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`3.CreateChain(`1)">
+            <summary>
+                Creates the chain.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <returns>
+                The Expression String.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+                Operation not supported for the given expression type {expression.Type}. "
+                + "Only MemberExpression and ConstantExpression are currently supported.
+            </exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`3.CreateChain(`1,Anori.ExpressionObservers.Tree.Interfaces.IExpressionTree)">
+            <summary>
+                Creates the chain.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="parameter2">The parameter2.</param>
+            <param name="nodes">The nodes.</param>
+            <exception cref="T:System.NotSupportedException">Expression Tree Node not supported.</exception>
+        </member>
+        <member name="T:Anori.ParameterObservers.Base.ParameterObserverBase`2">
+            <summary>
+                Property Observer Base.
+            </summary>
+            <typeparam name="TSelf">The type of the self.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase`1" />
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Base.ParameterObserverBase`2.propertyExpression">
+            <summary>
+                The property expression.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`2.#ctor(System.Linq.Expressions.Expression{System.Func{`1}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase`2"/> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <exception cref="T:System.ArgumentNullException">propertyExpression is null.</exception>
+        </member>
+        <member name="P:Anori.ParameterObservers.Base.ParameterObserverBase`2.ExpressionString">
+            <summary>
+                Gets the expression string.
+            </summary>
+            <value>
+                The expression string.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`2.CreateChain">
+            <summary>
+                Creates the chain.
+            </summary>
+            <returns>
+                The Expression String.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+                Operation not supported for the given expression type {expression.Type}. "
+                + "Only MemberExpression and ConstantExpression are currently supported.
+            </exception>
+        </member>
+        <member name="T:Anori.ParameterObservers.Base.ParameterObserverBase`1">
+            <summary>
+                Property Observer Base for flurnent.
+            </summary>
+            <typeparam name="TSelf">The type of the self.</typeparam>
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase" />
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`1.Subscribe">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <returns>Self object.</returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`1.Subscribe(System.Boolean)">
+            <summary>
+                Subscribes the specified silent.
+            </summary>
+            <param name="silent">if set to <c>true</c> [silent].</param>
+            <returns>Self object.</returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`1.Unsubscribe">
+            <summary>
+                Unsubscribes this instance.
+            </summary>
+            <returns>Self object.</returns>
+        </member>
+        <member name="T:Anori.ParameterObservers.Interfaces.IParameterObserverNode">
+            <summary>
+            The Parameter Observer Node interface.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Interfaces.IParameterObserverNode.UnsubscribeListener">
+            <summary>
+            Unsubscribes the listener.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Interfaces.IParameterObserverNode.SubscribeListenerFor(Anori.Parameters.IReadOnlyParameter)">
+            <summary>
+            Subscribes the listener for.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Interfaces.IParameterObserverRootNode">
+            <summary>
+            The Parameter Observer Root Node interface.
+            </summary>
+            <typeparam name="TOwner">The type of the owner.</typeparam>
+            <seealso cref="T:Anori.ParameterObservers.Interfaces.IParameterObserverNode" />
+        </member>
+        <member name="M:Anori.ParameterObservers.Interfaces.IParameterObserverRootNode.SubscribeListenerForOwner">
+            <summary>
+            Subscribes the listener for owner.
+            </summary>
+        </member>
+        <member name="T:Anori.ParameterObservers.Nodes.ParameterObserverEndNode">
+            <summary>
+                The Parameter Observer End Node class.
+            </summary>
+            <seealso cref="T:Anori.ParameterObservers.Interfaces.IParameterObserverNode" />
+        </member>
+        <member name="F:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.action">
+            <summary>
+                The action.
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.parameter">
+            <summary>
+                The notify property changed.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.#ctor(System.Action)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Nodes.ParameterObserverEndNode" /> class.
+            </summary>
+            <param name="action">The action.</param>
+            <exception cref="T:System.ArgumentNullException">propertyInfo</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.SubscribeListenerFor(Anori.Parameters.IReadOnlyParameter)">
+            <summary>
+            Subscribes the listener for.
+            </summary>
+            <param name="parameter">The property changed.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.UnsubscribeListener">
+            <summary>
+                Unsubscribes the listener.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverEndNode.OnValueChanged(System.Object,Anori.Common.EventArgs{System.Object})">
+            <summary>
+            Called when [value changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="!:EventArgs&lt;object&gt;"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Nodes.ParameterObserverNode">
+            <summary>
+                Represents each node of nested properties expression and takes care of
+                subscribing/unsubscribing INotifyPropertyChanged.PropertyChanged listeners on it.
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Nodes.ParameterObserverNode.action">
+            <summary>
+                The action
+            </summary>
+        </member>
+        <member name="F:Anori.ParameterObservers.Nodes.ParameterObserverNode.parameter">
+            <summary>
+                The notify property changed
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverNode.#ctor(System.Reflection.PropertyInfo,System.Action)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Nodes.ParameterObserverNode" /> class.
+            </summary>
+            <param name="propertyInfo">The property information.</param>
+            <param name="action">The action.</param>
+            <exception cref="T:System.ArgumentNullException">propertyInfo</exception>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverNode.Next">
+            <summary>
+                Gets or sets the next.
+            </summary>
+            <value>
+                The next.
+            </value>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverNode.PropertyInfo">
+            <summary>
+                Gets the property information.
+            </summary>
+            <value>
+                The property information.
+            </value>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverNode.Previous">
+            <summary>
+            Gets or sets the previous.
+            </summary>
+            <value>
+            The previous.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverNode.SubscribeListenerFor(Anori.Parameters.IReadOnlyParameter)">
+            <summary>
+            Subscribes the listener for.
+            </summary>
+            <param name="parameter">The property changed.</param>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverNode.UnsubscribeListener">
+            <summary>
+                Unsubscribes the listener.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverNode.GenerateNextNode">
+            <summary>
+                Generates the next node.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+                Trying to subscribe ValueChanged listener in object that "
+                + $"owns '{this.Next.PropertyInfo.Name}' property, but the object does not implements IReadOnlyParameter.
+            </exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverNode.OnValueChanged(System.Object,Anori.Common.EventArgs{System.Object})">
+            <summary>
+                Called when [value changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Anori.Common.EventArgs`1" /> instance containing the event data.</param>
+        </member>
+        <member name="T:Anori.ParameterObservers.Nodes.ParameterObserverRootNode">
+            <summary>
+            The Parameter Observer Root Node class.
+            </summary>
+            <seealso cref="T:Anori.ParameterObservers.Nodes.ParameterObserverNode" />
+            <seealso cref="T:Anori.ParameterObservers.Interfaces.IParameterObserverRootNode" />
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverRootNode.#ctor(System.Reflection.PropertyInfo,System.Action,Anori.Parameters.IReadOnlyParameter)">
+            <summary>
+                Initializes a new instance of the <see cref="!:RootPropertyObserverNode" /> class.
+            </summary>
+            <param name="propertyInfo">The property information.</param>
+            <param name="action">The action.</param>
+            <param name="owner">The owner.</param>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverRootNode.Parameter">
+            <summary>
+                Gets the parameter.
+            </summary>
+            <value>
+                The parameter.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverRootNode.SubscribeListenerForOwner">
+            <summary>
+                Subscribes the listener for owner.
+            </summary>
+        </member>
+        <member name="T:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode">
+            <summary>
+            The Parameter Observer Single Node class.
+            </summary>
+            <seealso cref="T:Anori.ParameterObservers.Nodes.ParameterObserverEndNode" />
+            <seealso cref="T:Anori.ParameterObservers.Interfaces.IParameterObserverRootNode" />
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.#ctor(System.Action,System.Object,Anori.Parameters.IReadOnlyParameter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode"/> class.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="owner">The owner.</param>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.Parameter">
+            <summary>
+                Gets the parameter.
+            </summary>
+            <value>
+                The parameter.
+            </value>
+        </member>
+        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.Owner">
+            <summary>
+                Gets the owner.
+            </summary>
+            <value>
+                The owner.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.SubscribeListenerForOwner">
+            <summary>
+            Subscribes the listener for owner.
+            </summary>
+        </member>
+        <member name="T:Anori.ParameterObservers.ParameterObserver">
+            <summary>
+                Property Observer.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver.Observes``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Action,System.Boolean)">
+            <summary>
+                Observeses the specified property expression.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="action">The action.</param>
+            <param name="autoSubscribe">if set to <c>true</c> [automatic subscribe].</param>
+            <returns>
+                The Property Observer.
+            </returns>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver.Observes``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Action,System.Boolean)">
+            <summary>
+                Observeses the specified parameter1.
+            </summary>
+            <typeparam name="TParameter1">The type of the parameter1.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="action">The action.</param>
+            <param name="autoSubscribe">if set to <c>true</c> [automatic subscribe].</param>
+            <returns>
+                The Property Observer.
+            </returns>
+        </member>
+        <member name="T:Anori.ParameterObservers.ParameterObserver`2">
+            <summary>
+                Property Observer.
+            </summary>
+            <typeparam name="TParameter1">The type of the parameter1.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="!:Anori.ExpressionObservers.Observers.ParameterObserver&lt;TParameter1, TResult&gt;" />
+        </member>
+        <member name="F:Anori.ParameterObservers.ParameterObserver`2.action">
+            <summary>
+                The action.
+            </summary>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}},System.Action)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ExpressionObservers.Observers.PropertyObserver`2" /> class.
+            </summary>
+            <param name="parameter1">The parameter1.</param>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="action">The action.</param>
+            <exception cref="T:System.ArgumentNullException">The action is null.</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver`2.OnAction">
+            <summary>
+                The action.
+            </summary>
+        </member>
+        <member name="T:Anori.ParameterObservers.ParameterObserver`1">
+            <summary>
+                Property Observer.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase`1" />
+        </member>
+        <member name="F:Anori.ParameterObservers.ParameterObserver`1.action">
+            <summary>
+                Gets the action.
+            </summary>
+            <value>
+                The action.
+            </value>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.Action)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Anori.ExpressionObservers.Observers.PropertyObserver`1" /> class.
+            </summary>
+            <param name="propertyExpression">The property expression.</param>
+            <param name="action">The action.</param>
+            <exception cref="T:System.ArgumentNullException">The action is null.</exception>
+        </member>
+        <member name="M:Anori.ParameterObservers.ParameterObserver`1.OnAction">
+            <summary>
+                The action.
+            </summary>
+        </member>
+    </members>
+</doc>

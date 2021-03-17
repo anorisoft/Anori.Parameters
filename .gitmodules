@@ -1,0 +1,4 @@
+[submodule "Submodules/Anori.Extensions"]
+	path = Submodules/Anori.Extensions
+	url = https://github.com/anorisoft/Anori.Extensions
+	branch = develop

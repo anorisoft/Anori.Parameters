@@ -29,7 +29,7 @@ namespace Anori.ParameterObservers.UnitTests
 
         public IParameter<int> IntParameter { get; } = new Parameter<int>();
 
-        public Expression<Func<IParameter<int>>> IntPropertyExpression => () => this.IntParameter;
+        public Expression<Func<IParameter<int>>> IntParameterExpression => () => this.IntParameter;
 
         public bool Type { get; set; }
 

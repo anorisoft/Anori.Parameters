@@ -4,16 +4,15 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace Anori.ParameterObservers
+namespace Anori.ParameterObservers.Base
 {
     using System;
-    using System.ComponentModel;
     using System.Linq.Expressions;
 
     using Anori.ExpressionObservers;
     using Anori.ExpressionObservers.Interfaces;
-    using Anori.ExpressionObservers.Observers;
-    using Anori.ParameterObservers.Nodes;
+    using Anori.ExpressionObservers.Tree;
+    using Anori.ExpressionObservers.Tree.Interfaces;
 
     using JetBrains.Annotations;
 
@@ -92,11 +91,11 @@ namespace Anori.ParameterObservers
 
 
         /// <summary>
-        ///     Creates the chain.
+        /// Creates the chain.
         /// </summary>
         /// <param name="parameter1">The parameter1.</param>
-        /// <param name="parameter2">The parameter2.</param>
         /// <param name="nodes">The nodes.</param>
+        /// <exception cref="System.NotSupportedException"></exception>
         /// <exception cref="NotSupportedException">Expression Tree Node not supported.</exception>
         private void CreateChain(TParameter1 parameter1, IExpressionTree nodes)
         {
@@ -106,12 +105,12 @@ namespace Anori.ParameterObservers
                 {
                     case IParameterNode parameterElement:
                         {
-                            if (!(parameterElement.Next is IPropertyNode propertyElement))
+                            if (!(parameterElement is { Next: IPropertyNode propertyElement }))
                             {
                                 continue;
                             }
 
-                            var parameterGetter = ExpressionGetter.CreateParameterGetter<TParameter1, TResult>(
+                            var parameterGetter = ExpressionGetter.CreateParameterGetter(
                                 parameterElement,
                                 this.propertyExpression);
 
@@ -124,7 +123,7 @@ namespace Anori.ParameterObservers
 
                     case IConstantNode constantElement when treeRoot.Next is IFieldNode fieldElement:
                         {
-                            if (!(fieldElement.Next is IPropertyNode propertyElement))
+                            if (!(fieldElement is { Next: IPropertyNode propertyElement }))
                             {
                                 continue;
                             }
@@ -139,7 +138,7 @@ namespace Anori.ParameterObservers
 
                     case IConstantNode constantElement:
                         {
-                            if (!(treeRoot.Next is IPropertyNode propertyElement))
+                            if (!(treeRoot is { Next: IPropertyNode propertyElement }))
                             {
                                 continue;
                             }

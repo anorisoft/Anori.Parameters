@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Anori.Parameters</name>
+    </assembly>
+    <members>
+        <member name="T:Anori.Parameters.IParameter">
+            <summary>
+            </summary>
+            <seealso cref="T:Anori.Parameters.IReadOnlyParameter`1" />
+            <seealso cref="T:Anori.Parameters.IParameter" />
+        </member>
+        <member name="P:Anori.Parameters.IParameter.Value">
+            <summary>
+                Gets or sets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="T:Anori.Parameters.IParameter`1">
+            <summary>
+            The I Parameter interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:Anori.Parameters.IReadOnlyParameter`1" />
+            <seealso cref="T:Anori.Parameters.IParameter" />
+            <seealso cref="T:Anori.Parameters.IReadOnlyParameter`1" />
+            <seealso cref="T:Anori.Parameters.IParameter" />
+        </member>
+        <member name="P:Anori.Parameters.IParameter`1.Value">
+            <summary>
+                Gets or sets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="T:Anori.Parameters.IReadOnlyParameter">
+            <summary>
+                The I Read Only Parameter interface.
+            </summary>
+        </member>
+        <member name="E:Anori.Parameters.IReadOnlyParameter.ValueChanged">
+            <summary>
+                Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:Anori.Parameters.IReadOnlyParameter.Value">
+            <summary>
+                Gets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="T:Anori.Parameters.IReadOnlyParameter`1">
+            <summary>
+            The I Read Only Parameter interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:Anori.Parameters.IReadOnlyParameter" />
+        </member>
+        <member name="P:Anori.Parameters.IReadOnlyParameter`1.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="E:Anori.Parameters.IReadOnlyParameter`1.ValueChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="T:Anori.Parameters.Parameter`1">
+            <summary>
+            The Parameter class.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:Anori.Parameters.IParameter`1" />
+        </member>
+        <member name="F:Anori.Parameters.Parameter`1.value">
+            <summary>
+                The value.
+            </summary>
+        </member>
+        <member name="E:Anori.Parameters.Parameter`1.Anori#Parameters#IReadOnlyParameter#ValueChanged">
+            <summary>
+                Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="E:Anori.Parameters.Parameter`1.ValueChanged">
+            <summary>
+                Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="E:Anori.Parameters.Parameter`1.InternalValueChanged">
+            <summary>
+                Occurs when [internal value changed].
+            </summary>
+        </member>
+        <member name="P:Anori.Parameters.Parameter`1.Anori#Parameters#IReadOnlyParameter#Value">
+            <summary>
+                Gets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="P:Anori.Parameters.Parameter`1.Anori#Parameters#IParameter#Value">
+            <summary>
+                Gets or sets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="P:Anori.Parameters.Parameter`1.Value">
+            <summary>
+                Gets or sets the value.
+            </summary>
+            <value>
+                The value.
+            </value>
+        </member>
+        <member name="M:Anori.Parameters.Parameter`1.OnValueChanged(`0)">
+            <summary>
+            Called when [value changed].
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+    </members>
+</doc>
