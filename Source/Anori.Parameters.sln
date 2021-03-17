@@ -36,7 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anori.ExpressionObservers",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anori.Extensions", "..\Submodules\Anori.Extensions\Source\Anori.Extensions\Anori.Extensions.csproj", "{202EBC62-E783-477A-99B0-D61D3B394D03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anori.ParameterObservers.Reactive", "Anori.ParameterObservers.Reactive\Anori.ParameterObservers.Reactive.csproj", "{250E3A7E-AFCA-43C7-BEA7-478DE1C4C632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anori.ParameterObservers.Reactive", "Anori.ParameterObservers.Reactive\Anori.ParameterObservers.Reactive.csproj", "{250E3A7E-AFCA-43C7-BEA7-478DE1C4C632}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,21 +76,18 @@ Global
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Release Submodules|Any CPU.ActiveCfg = Release Submodules|Any CPU
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Release Submodules|Any CPU.Build.0 = Release Submodules|Any CPU
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Debug Submodules|Any CPU.ActiveCfg = Debug Submodules|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Debug Submodules|Any CPU.Build.0 = Debug Submodules|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Release Submodules|Any CPU.ActiveCfg = Release|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Release Submodules|Any CPU.Build.0 = Release|Any CPU
 		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A888E84-FE25-4250-9E99-0B03EB2F1C51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Debug Submodules|Any CPU.ActiveCfg = Debug Submodules|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Debug Submodules|Any CPU.Build.0 = Debug Submodules|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Release Submodules|Any CPU.ActiveCfg = Release Submodules|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Release Submodules|Any CPU.Build.0 = Release Submodules|Any CPU
 		{202EBC62-E783-477A-99B0-D61D3B394D03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{202EBC62-E783-477A-99B0-D61D3B394D03}.Release|Any CPU.Build.0 = Release|Any CPU
 		{250E3A7E-AFCA-43C7-BEA7-478DE1C4C632}.Debug Submodules|Any CPU.ActiveCfg = Debug Submodules|Any CPU
 		{250E3A7E-AFCA-43C7-BEA7-478DE1C4C632}.Debug Submodules|Any CPU.Build.0 = Debug Submodules|Any CPU
 		{250E3A7E-AFCA-43C7-BEA7-478DE1C4C632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
