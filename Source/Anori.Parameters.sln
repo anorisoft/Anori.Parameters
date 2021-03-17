@@ -69,7 +69,6 @@ Global
 		{B9DE585E-EAA9-48A0-80F7-C07287C9A84A}.Release Submodules|Any CPU.ActiveCfg = Release|Any CPU
 		{B9DE585E-EAA9-48A0-80F7-C07287C9A84A}.Release Submodules|Any CPU.Build.0 = Release|Any CPU
 		{B9DE585E-EAA9-48A0-80F7-C07287C9A84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9DE585E-EAA9-48A0-80F7-C07287C9A84A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Debug Submodules|Any CPU.ActiveCfg = Debug Submodules|Any CPU
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Debug Submodules|Any CPU.Build.0 = Debug Submodules|Any CPU
 		{0B877647-D4E3-4D22-835A-9E1800ECF62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
