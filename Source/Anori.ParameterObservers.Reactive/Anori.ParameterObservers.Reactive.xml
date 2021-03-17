@@ -10,7 +10,7 @@
             </summary>
             <typeparam name="TParameter1">The type of the parameter1.</typeparam>
             <typeparam name="TResult">The type of the result.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ReferenceTypeObservers.BehaviorParameterObserver`2.propertyGetter">
@@ -56,7 +56,7 @@
             The Behavior Parameter Observer class.
             </summary>
             <typeparam name="TResult">The type of the value.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ReferenceTypeObservers.BehaviorParameterObserver`1.propertyGetter">
@@ -127,7 +127,7 @@
             </summary>
             <typeparam name="TParameter1">The type of the owner.</typeparam>
             <typeparam name="TResult">The type of the value.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ReferenceTypeObservers.ParameterObserver`2.propertyGetter">
@@ -396,7 +396,7 @@
             </summary>
             <typeparam name="TParameter1">The type of the parameter1.</typeparam>
             <typeparam name="TResult">The type of the result.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ValueTypeObservers.BehaviorParameterObserver`2.propertyGetter">
@@ -442,7 +442,7 @@
             The Behavior Parameter Observer class.
             </summary>
             <typeparam name="TResult">The type of the value.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ValueTypeObservers.BehaviorParameterObserver`1.propertyGetter">
@@ -513,7 +513,7 @@
             </summary>
             <typeparam name="TParameter1">The type of the owner.</typeparam>
             <typeparam name="TResult">The type of the value.</typeparam>
-            <seealso cref="T:Anori.ParameterObservers.ParameterObserver`1" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
             <seealso cref="T:System.IObservable`1" />
         </member>
         <member name="F:Anori.ParameterObservers.Reactive.ValueTypeObservers.ParameterObserver`2.propertyGetter">

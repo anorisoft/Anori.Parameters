@@ -235,11 +235,11 @@
         </member>
         <member name="M:Anori.ParameterObservers.Base.ParameterObserverBase`3.CreateChain(`1,Anori.ExpressionObservers.Tree.Interfaces.IExpressionTree)">
             <summary>
-                Creates the chain.
+            Creates the chain.
             </summary>
             <param name="parameter1">The parameter1.</param>
-            <param name="parameter2">The parameter2.</param>
             <param name="nodes">The nodes.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
             <exception cref="T:System.NotSupportedException">Expression Tree Node not supported.</exception>
         </member>
         <member name="T:Anori.ParameterObservers.Base.ParameterObserverBase`2">
@@ -488,7 +488,7 @@
             <seealso cref="T:Anori.ParameterObservers.Nodes.ParameterObserverEndNode" />
             <seealso cref="T:Anori.ParameterObservers.Interfaces.IParameterObserverRootNode" />
         </member>
-        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.#ctor(System.Action,System.Object,Anori.Parameters.IReadOnlyParameter)">
+        <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.#ctor(System.Action,Anori.Parameters.IReadOnlyParameter)">
             <summary>
             Initializes a new instance of the <see cref="T:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode"/> class.
             </summary>
@@ -504,25 +504,17 @@
                 The parameter.
             </value>
         </member>
-        <member name="P:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.Owner">
-            <summary>
-                Gets the owner.
-            </summary>
-            <value>
-                The owner.
-            </value>
-        </member>
         <member name="M:Anori.ParameterObservers.Nodes.ParameterObserverSingleNode.SubscribeListenerForOwner">
             <summary>
             Subscribes the listener for owner.
             </summary>
         </member>
-        <member name="T:Anori.ParameterObservers.ParameterObserver">
+        <member name="T:Anori.ParameterObservers.Observers.ParameterObserver">
             <summary>
                 Property Observer.
             </summary>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver.Observes``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Action,System.Boolean)">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver.Observes``1(System.Linq.Expressions.Expression{System.Func{``0}},System.Action,System.Boolean)">
             <summary>
                 Observeses the specified property expression.
             </summary>
@@ -534,7 +526,7 @@
                 The Property Observer.
             </returns>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver.Observes``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Action,System.Boolean)">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver.Observes``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Action,System.Boolean)">
             <summary>
                 Observeses the specified parameter1.
             </summary>
@@ -548,20 +540,20 @@
                 The Property Observer.
             </returns>
         </member>
-        <member name="T:Anori.ParameterObservers.ParameterObserver`2">
+        <member name="T:Anori.ParameterObservers.Observers.ParameterObserver`2">
             <summary>
-                Property Observer.
+            Property Observer.
             </summary>
             <typeparam name="TParameter1">The type of the parameter1.</typeparam>
             <typeparam name="TResult">The type of the result.</typeparam>
-            <seealso cref="!:Anori.ExpressionObservers.Observers.ParameterObserver&lt;TParameter1, TResult&gt;" />
+            <seealso cref="T:Anori.ParameterObservers.Observers.ParameterObserver`1" />
         </member>
-        <member name="F:Anori.ParameterObservers.ParameterObserver`2.action">
+        <member name="F:Anori.ParameterObservers.Observers.ParameterObserver`2.action">
             <summary>
                 The action.
             </summary>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}},System.Action)">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver`2.#ctor(`0,System.Linq.Expressions.Expression{System.Func{`0,`1}},System.Action)">
             <summary>
                 Initializes a new instance of the <see cref="T:Anori.ExpressionObservers.Observers.PropertyObserver`2" /> class.
             </summary>
@@ -570,19 +562,19 @@
             <param name="action">The action.</param>
             <exception cref="T:System.ArgumentNullException">The action is null.</exception>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver`2.OnAction">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver`2.OnAction">
             <summary>
                 The action.
             </summary>
         </member>
-        <member name="T:Anori.ParameterObservers.ParameterObserver`1">
+        <member name="T:Anori.ParameterObservers.Observers.ParameterObserver`1">
             <summary>
                 Property Observer.
             </summary>
             <typeparam name="TResult">The type of the result.</typeparam>
             <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase`1" />
         </member>
-        <member name="F:Anori.ParameterObservers.ParameterObserver`1.action">
+        <member name="F:Anori.ParameterObservers.Observers.ParameterObserver`1.action">
             <summary>
                 Gets the action.
             </summary>
@@ -590,7 +582,7 @@
                 The action.
             </value>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.Action)">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0}},System.Action)">
             <summary>
                 Initializes a new instance of the <see cref="T:Anori.ExpressionObservers.Observers.PropertyObserver`1" /> class.
             </summary>
@@ -598,7 +590,7 @@
             <param name="action">The action.</param>
             <exception cref="T:System.ArgumentNullException">The action is null.</exception>
         </member>
-        <member name="M:Anori.ParameterObservers.ParameterObserver`1.OnAction">
+        <member name="M:Anori.ParameterObservers.Observers.ParameterObserver`1.OnAction">
             <summary>
                 The action.
             </summary>
