@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup Condition="!($(Configuration.Contains('Submodules')))">
-    <PackageReference Include="Anori.Common" Version="1.0.0-alpha0004" />
-    <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0009" />
+    <PackageReference Include="Anori.Common" Version="1.0.0-alpha0005" />
+    <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0011" />
   </ItemGroup>
 
   <ItemGroup Condition="($(Configuration.Contains('Submodules')))">
