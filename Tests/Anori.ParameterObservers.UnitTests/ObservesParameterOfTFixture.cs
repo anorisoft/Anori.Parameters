@@ -348,7 +348,7 @@ namespace Anori.ParameterObservers.UnitTests
         }
 
 
-
+        [Ignore("")]
         [Test]
         public void
         ReactiveParameterObservers_ReplayParameterObserver_Timspan2_OwnerExpression_ComplexProperty_Value_Integer_AutoActivate_True4()
