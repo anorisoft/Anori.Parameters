@@ -414,7 +414,7 @@ namespace Anori.ParameterObservers.UnitTests
                 value = v;
                 TestContext.Out.WriteLine($"Count: {count}, Value " + (v.HasValue ? v.ToString() : "null"));
             });
-
+            Thread.Sleep(100);
             Assert.AreEqual(10, count);
             Assert.AreEqual(null, value);
         }
