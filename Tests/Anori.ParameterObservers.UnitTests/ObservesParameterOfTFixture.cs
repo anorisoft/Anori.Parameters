@@ -26,7 +26,7 @@ namespace Anori.ParameterObservers.UnitTests
     {
        
 
-        [Test]
+      //  [Test]
         public void NotifyPropertyChanged_Equal_2_Test()
         {
             var notifyPropertyChangedTestObject = new Parameter<ParameterTestObject>{ Value = new ParameterTestObject()};
