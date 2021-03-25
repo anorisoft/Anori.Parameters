@@ -569,10 +569,10 @@
         </member>
         <member name="T:Anori.ParameterObservers.Observers.ParameterObserver`1">
             <summary>
-                Property Observer.
+            Property Observer.
             </summary>
             <typeparam name="TResult">The type of the result.</typeparam>
-            <seealso cref="T:Anori.ExpressionObservers.Base.PropertyObserverBase`1" />
+            <seealso cref="!:Base.ParameterObserverBase&lt;Observers.ParameterObserver&lt;TResult&gt;, TResult&gt;" />
         </member>
         <member name="F:Anori.ParameterObservers.Observers.ParameterObserver`1.action">
             <summary>

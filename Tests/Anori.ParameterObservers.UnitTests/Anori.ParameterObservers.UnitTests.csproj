@@ -23,13 +23,13 @@
   </ItemGroup>
 
   <ItemGroup Condition="!($(Configuration.Contains('Submodules')))">
-    <!--<PackageReference Include="Anori.Common" Version="1.0.0-alpha0005" />
-    <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0011" />-->
+    <PackageReference Include="Anori.Common" Version="1.0.0-alpha0006" />
+    <PackageReference Include="Anori.Extensions" Version="1.0.0-alpha0012" />
   </ItemGroup>
 
   <ItemGroup Condition="($(Configuration.Contains('Submodules')))">
-    <!--<ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Extensions\Source\Anori.Extensions\Anori.Extensions.csproj" />
-    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Common\Source\Anori.Common\Anori.Common.csproj" />-->
+    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Extensions\Source\Anori.Extensions\Anori.Extensions.csproj" />
+    <ProjectReference Include="$(SolutionDir)..\Submodules\Anori.Common\Source\Anori.Common\Anori.Common.csproj" />
   </ItemGroup>
 
 </Project>

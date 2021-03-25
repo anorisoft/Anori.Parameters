@@ -18,6 +18,6 @@ namespace Anori.Parameters
         /// <value>
         ///     The value.
         /// </value>
-        new object Value { get; set; }
+        new object? Value { get; set; }
     }
 }

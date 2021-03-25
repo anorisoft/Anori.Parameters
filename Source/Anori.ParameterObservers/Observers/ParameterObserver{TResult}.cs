@@ -9,17 +9,16 @@ namespace Anori.ParameterObservers.Observers
     using System;
     using System.Linq.Expressions;
 
-    using Anori.ExpressionObservers.Base;
     using Anori.ExpressionObservers.Observers;
     using Anori.ParameterObservers.Base;
 
     using JetBrains.Annotations;
 
     /// <summary>
-    ///     Property Observer.
+    /// Property Observer.
     /// </summary>
     /// <typeparam name="TResult">The type of the result.</typeparam>
-    /// <seealso cref="PropertyObserverBase{TSelf}" />
+    /// <seealso cref="Base.ParameterObserverBase{Observers.ParameterObserver{TResult}, TResult}" />
     public sealed class ParameterObserver<TResult> : ParameterObserverBase<ParameterObserver<TResult>, TResult>
     {
         /// <summary>

@@ -23,11 +23,11 @@ namespace Anori.Parameters
         /// <value>
         /// The value.
         /// </value>
-        new T Value { get; }
+        new T? Value { get; }
 
         /// <summary>
         /// Occurs when [value changed].
         /// </summary>
-        new event EventHandler<EventArgs<T>> ValueChanged;
+        new event EventHandler<EventArgs<T?>>? ValueChanged;
     }
 }

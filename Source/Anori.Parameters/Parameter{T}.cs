@@ -20,12 +20,12 @@ namespace Anori.Parameters
         /// <summary>
         ///     The value.
         /// </summary>
-        private T value;
+        private T? value;
 
         /// <summary>
         ///     Occurs when [value changed].
         /// </summary>
-        event EventHandler<EventArgs<object>> IReadOnlyParameter.ValueChanged
+        event EventHandler<EventArgs<object?>>? IReadOnlyParameter.ValueChanged
         {
             add => this.InternalValueChanged += value;
             remove => this.InternalValueChanged -= value;
@@ -34,12 +34,12 @@ namespace Anori.Parameters
         /// <summary>
         ///     Occurs when [value changed].
         /// </summary>
-        public event EventHandler<EventArgs<T>> ValueChanged;
+        public event EventHandler<EventArgs<T?>>? ValueChanged;
 
         /// <summary>
         ///     Occurs when [internal value changed].
         /// </summary>
-        private event EventHandler<EventArgs<object>> InternalValueChanged;
+        private event EventHandler<EventArgs<object?>>? InternalValueChanged;
 
         /// <summary>
         ///     Gets the value.
@@ -47,7 +47,7 @@ namespace Anori.Parameters
         /// <value>
         ///     The value.
         /// </value>
-        object IReadOnlyParameter.Value => this.Value;
+        object? IReadOnlyParameter.Value => this.Value;
 
         /// <summary>
         ///     Gets or sets the value.
@@ -55,10 +55,10 @@ namespace Anori.Parameters
         /// <value>
         ///     The value.
         /// </value>
-        object IParameter.Value
+        object? IParameter.Value
         {
             get => this.Value;
-            set => this.Value = (T)value;
+            set => this.Value = (T?)value;
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Anori.Parameters
         /// <value>
         ///     The value.
         /// </value>
-        public T Value
+        public T? Value
         {
             get => this.value;
             set
@@ -93,10 +93,10 @@ namespace Anori.Parameters
         /// Called when [value changed].
         /// </summary>
         /// <param name="value">The value.</param>
-        protected virtual void OnValueChanged(T value)
+        protected virtual void OnValueChanged(T? value)
         {
-            this.InternalValueChanged?.Invoke(this, new EventArgs<object>(value));
-            this.ValueChanged?.Invoke(this, new EventArgs<T>(value));
+            this.InternalValueChanged?.Invoke(this, new EventArgs<object?>(value));
+            this.ValueChanged?.Invoke(this, new EventArgs<T?>(value));
         }
     }
 }

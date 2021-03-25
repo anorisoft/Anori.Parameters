@@ -17,7 +17,7 @@ namespace Anori.Parameters
         /// <summary>
         ///     Occurs when [value changed].
         /// </summary>
-        event EventHandler<EventArgs<object>> ValueChanged;
+        event EventHandler<EventArgs<object?>>? ValueChanged;
 
         /// <summary>
         ///     Gets the value.
