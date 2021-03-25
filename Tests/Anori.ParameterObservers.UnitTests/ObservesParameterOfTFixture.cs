@@ -346,9 +346,8 @@ namespace Anori.ParameterObservers.UnitTests
             Assert.AreEqual(6, count);
             Assert.AreEqual(null, value);
         }
-
-
-     //   [Ignore("")]
+        
+        [Ignore("")]
         [Test]
         public void
         ReactiveParameterObservers_ReplayParameterObserver_Timspan2_OwnerExpression_ComplexProperty_Value_Integer_AutoActivate_True4()
