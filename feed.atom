@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>http://anorisoft.github.io/Anori.Parameters</id>
+	<title>Anori.Parameters</title>
+	<link rel="self" href="http://anorisoft.github.io/Anori.Parameters" />
+	<rights>2021</rights>
+	<updated>2021-03-26T05:45:01Z</updated>
+</feed>

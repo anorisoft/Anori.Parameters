@@ -1,0 +1,479 @@
+
+var camelCaseTokenizer = function (builder) {
+
+  var pipelineFunction = function (token) {
+    var previous = '';
+    // split camelCaseString to on each word and combined words
+    // e.g. camelCaseTokenizer -> ['camel', 'case', 'camelcase', 'tokenizer', 'camelcasetokenizer']
+    var tokenStrings = token.toString().trim().split(/[\s\-]+|(?=[A-Z])/).reduce(function(acc, cur) {
+      var current = cur.toLowerCase();
+      if (acc.length === 0) {
+        previous = current;
+        return acc.concat(current);
+      }
+      previous = previous.concat(current);
+      return acc.concat([current, previous]);
+    }, []);
+
+    // return token for each string
+    // will copy any metadata on input token
+    return tokenStrings.map(function(tokenString) {
+      return token.clone(function(str) {
+        return tokenString;
+      })
+    });
+  }
+
+  lunr.Pipeline.registerFunction(pipelineFunction, 'camelCaseTokenizer')
+
+  builder.pipeline.before(lunr.stemmer, pipelineFunction)
+}
+var searchModule = function() {
+    var documents = [];
+    var idMap = [];
+    function a(a,b) { 
+        documents.push(a);
+        idMap.push(b); 
+    }
+
+    a(
+        {
+            id:0,
+            title:"ObserverFactory",
+            content:"ObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ObserverFactory',
+            title:"ObserverFactory",
+            description:""
+        }
+    );
+    a(
+        {
+            id:1,
+            title:"ParameterObserverBase",
+            content:"ParameterObserverBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Base/ParameterObserverBase',
+            title:"ParameterObserverBase",
+            description:""
+        }
+    );
+    a(
+        {
+            id:2,
+            title:"ObserverFactory",
+            content:"ObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ObserverFactory',
+            title:"ObserverFactory",
+            description:""
+        }
+    );
+    a(
+        {
+            id:3,
+            title:"BehaviorParameterObserver",
+            content:"BehaviorParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/BehaviorParameterObserver_1',
+            title:"BehaviorParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:4,
+            title:"ReplayParameterObserver",
+            content:"ReplayParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ReplayParameterObserver_1',
+            title:"ReplayParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:5,
+            title:"ParameterObserverBase",
+            content:"ParameterObserverBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Base/ParameterObserverBase_3',
+            title:"ParameterObserverBase<TSelf, TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:6,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ParameterObserver_1',
+            title:"ParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:7,
+            title:"ReplayParameterObserver",
+            content:"ReplayParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ReplayParameterObserver_2',
+            title:"ReplayParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:8,
+            title:"IReadOnlyParameter",
+            content:"IReadOnlyParameter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.Parameters/IReadOnlyParameter',
+            title:"IReadOnlyParameter",
+            description:""
+        }
+    );
+    a(
+        {
+            id:9,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Observers/ParameterObserver_2',
+            title:"ParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:10,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ParameterObserver_2',
+            title:"ParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:11,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Observers/ParameterObserver',
+            title:"ParameterObserver",
+            description:""
+        }
+    );
+    a(
+        {
+            id:12,
+            title:"ParameterObserverBase",
+            content:"ParameterObserverBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Base/ParameterObserverBase_1',
+            title:"ParameterObserverBase<TSelf>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:13,
+            title:"ReplayParameterObserver",
+            content:"ReplayParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ReplayParameterObserver_2',
+            title:"ReplayParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:14,
+            title:"ReplayObserverFactory",
+            content:"ReplayObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ReplayObserverFactory',
+            title:"ReplayObserverFactory",
+            description:""
+        }
+    );
+    a(
+        {
+            id:15,
+            title:"BehaviorObserverFactory",
+            content:"BehaviorObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/BehaviorObserverFactory',
+            title:"BehaviorObserverFactory",
+            description:""
+        }
+    );
+    a(
+        {
+            id:16,
+            title:"IReadOnlyParameter",
+            content:"IReadOnlyParameter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.Parameters/IReadOnlyParameter_1',
+            title:"IReadOnlyParameter<T>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:17,
+            title:"BehaviorObserverFactory",
+            content:"BehaviorObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/BehaviorObserverFactory',
+            title:"BehaviorObserverFactory",
+            description:""
+        }
+    );
+    a(
+        {
+            id:18,
+            title:"ParameterObserverBase",
+            content:"ParameterObserverBase",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Base/ParameterObserverBase_2',
+            title:"ParameterObserverBase<TSelf, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:19,
+            title:"ReplayParameterObserver",
+            content:"ReplayParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ReplayParameterObserver_1',
+            title:"ReplayParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:20,
+            title:"BehaviorParameterObserver",
+            content:"BehaviorParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/BehaviorParameterObserver_2',
+            title:"BehaviorParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:21,
+            title:"Parameter",
+            content:"Parameter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.Parameters/Parameter_1',
+            title:"Parameter<T>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:22,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Observers/ParameterObserver_1',
+            title:"ParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:23,
+            title:"BehaviorParameterObserver",
+            content:"BehaviorParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/BehaviorParameterObserver_1',
+            title:"BehaviorParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:24,
+            title:"BehaviorParameterObserver",
+            content:"BehaviorParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/BehaviorParameterObserver_2',
+            title:"BehaviorParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:25,
+            title:"IParameter",
+            content:"IParameter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.Parameters/IParameter_1',
+            title:"IParameter<T>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:26,
+            title:"IParameter",
+            content:"IParameter",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.Parameters/IParameter',
+            title:"IParameter",
+            description:""
+        }
+    );
+    a(
+        {
+            id:27,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ValueTypeObservers/ParameterObserver_2',
+            title:"ParameterObserver<TParameter1, TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:28,
+            title:"ParameterObserver",
+            content:"ParameterObserver",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ParameterObserver_1',
+            title:"ParameterObserver<TResult>",
+            description:""
+        }
+    );
+    a(
+        {
+            id:29,
+            title:"ReplayObserverFactory",
+            content:"ReplayObserverFactory",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Anori.Parameters/api/Anori.ParameterObservers.Reactive.ReferenceTypeObservers/ReplayObserverFactory',
+            title:"ReplayObserverFactory",
+            description:""
+        }
+    );
+    var idx = lunr(function() {
+        this.field('title');
+        this.field('content');
+        this.field('description');
+        this.field('tags');
+        this.ref('id');
+        this.use(camelCaseTokenizer);
+
+        this.pipeline.remove(lunr.stopWordFilter);
+        this.pipeline.remove(lunr.stemmer);
+        documents.forEach(function (doc) { this.add(doc) }, this)
+    });
+
+    return {
+        search: function(q) {
+            return idx.search(q).map(function(i) {
+                return idMap[i.ref];
+            });
+        }
+    };
+}();
